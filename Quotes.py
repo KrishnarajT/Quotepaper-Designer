@@ -1,4 +1,15 @@
 import os
+from pathlib import Path
+
+# Length of each line of the quote in number of words
+max_words = 12  # higher would mean long quote lines
+
+# Maximum number of lines in each quote that is allowed
+max_lines = 12  # higher  == more lines, allowing longer quotes to be pasted.
+
+# Number of characters of each quote to check with the srt files.
+charac_nums = 20  # higher == more accuracy
+
 
 def modify_quotes(base_path, fortune_file_path):
     '''
@@ -13,7 +24,7 @@ def modify_quotes(base_path, fortune_file_path):
                 quote_line_words = quote_lines[j].split(' ')
                 for l in range(len(quote_line_words)):
                     quote_line_words[l] = quote_line_words[l] + ' '
-                for k in range(9, len(quote_line_words), 9):
+                for k in range(max_words, len(quote_line_words), max_words):
                     quote_line_words[k] = quote_line_words[k] + '\n'
 
                 tmp = ''
@@ -25,7 +36,7 @@ def modify_quotes(base_path, fortune_file_path):
             quote_list[i] = quote_list[i].join(quote_lines)
             quote_list[i] = quote_list[i].strip('\n')
         for i in quote_list[:]:
-            if i.count('\n') > 10:
+            if i.count('\n') > max_lines:
                 quote_list.remove(i)
     with open(os.path.join(base_path, f'Mod_{fortune_file_path.name}'), 'w') as fout:
         bulkwrite = ''
@@ -92,8 +103,6 @@ def make_quote_list(quotes):
     for i, _ in enumerate(quote_list):
         quote_list[i] = quote_list[i].strip(
             ' ').strip('\n').strip(' ').strip('\n')
-    with open(f'Finished Quotes/sth', 'w') as fout:
-        fout.writelines(quote_list)
     for i in quote_list[:]:
         if len(i) == 0:
             quote_list.remove(i)
@@ -107,12 +116,23 @@ def make_quote_search_list(quote_list):
             if ':' in quote_list[i].split('\n')[j]:
                 tmp = quote_list[i].split('\n')[j].split(
                     ':')[-1].lower().strip(' ').strip('\n')
-                if len(tmp) > 20:
-                    quote_search_text.append(tmp[:20])
+                if len(tmp) > charac_nums:
+                    quote_search_text.append(tmp[:charac_nums])
                     break
-                elif 0 < len(tmp) < 20:
+                elif 0 < len(tmp) < charac_nums:
                     quote_search_text.append(tmp)
                     break
             else:
                 continue
     return quote_search_text
+
+
+def mod_multiple_quotes(path):
+    """
+    the path should contain only a bunch of fortune files, 
+    Converts them into wallpaper quote worthy format, collectively
+    """
+    basepath = Path(path)
+    files_in_basepath = basepath.iterdir()
+    for _, item in enumerate(files_in_basepath):
+        qt.modify_quotes(item)

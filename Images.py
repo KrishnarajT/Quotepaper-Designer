@@ -1,14 +1,20 @@
-from PIL import ImageFont, ImageDraw
-from PIL import Image, ImageEnhance, ImageFilter
+from PIL import ImageFont, ImageDraw, Image, ImageEnhance, ImageFilter
 from pathlib import Path
 import Subtitle as sb
 import cv2
-# Defining some fonts
 import os
+
+# Defining some fonts
 ttf_poiret_one = ImageFont.truetype('./Fonts/poiretone-regular.ttf', 40)
 ttf_museo = ImageFont.truetype('./Fonts/Museo 300.otf', 40)
 ttf_bariol = ImageFont.truetype('./Fonts/Bariol_Serif_Regular.otf', 40)
 ttf_open = ImageFont.truetype('./Fonts/OpenSans-Regular.ttf', 40)
+
+# Starting point of Y axis for the quotes beginning from top left, determines where the quotes begin from
+# This variable depends on the number of lines in the quotes that were allowed.
+
+begin_y = 600
+begin_x = 80
 
 
 def extract_frames(path_to_folder, quote_search_text):
@@ -32,6 +38,8 @@ def extract_frames(path_to_folder, quote_search_text):
 
                     if found:
                         timestamp = sb.find_timestamp(all_subs, found)
+                        if timestamp == []:
+                            break
                         print(timestamp)
 
                         video = cv2.VideoCapture(path_to_vid)
@@ -44,7 +52,7 @@ def extract_frames(path_to_folder, quote_search_text):
                         print(frame_no)
                         video.set(1, frame_no)
                         success, image = video.read()
-                        try :
+                        try:
                             cv2.imwrite(os.path.join(
                                 path_to_folder, f"Frames/{h}.jpg"), image)
                         except:
@@ -55,7 +63,7 @@ def extract_frames(path_to_folder, quote_search_text):
 def make_wallpapers(base_path, image_path, quote_list):
     # read the image
     im = Image.open(image_path)
-    ov = Image.open("overlay2.png")
+    ov = Image.open("overlay.png")
 
     # image brightness enhancer
     img = im.resize((1920, 1080))
@@ -73,5 +81,6 @@ def make_wallpapers(base_path, image_path, quote_list):
 
     draw = ImageDraw.Draw(img)
     text = quote_list[int(image_path.stem)]
-    draw.text((80, 600), text, '#e1ebec', font=ttf_museo, align='left')
+    draw.text((begin_x, begin_y), text, '#e1ebec',
+              font=ttf_museo, align='left')
     img.save(f'./Wallpapers/{base_path.name} - {image_path.name}')
