@@ -52,3 +52,18 @@ Inspiration for the font [Museo 300](https://fonts.adobe.com/fonts/museo) was ta
 [Quotefancy](https://quotefancy.com/)
 
 # Example Images
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s02%20-%2047.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/Friends/Friends%20-%2014.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.2%20-%2031.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.7%20-%205.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s04%20-%2026.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Big%20Bang%20Theory/The%20Big%20Bang%20Theory%20Season%202%20-%203.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Big%20Bang%20Theory/The%20Big%20Bang%20Theory%20Season%205%20-%2024.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s05%20-%2028.jpg)
