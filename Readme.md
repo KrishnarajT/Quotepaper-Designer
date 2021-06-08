@@ -1,3 +1,4 @@
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Title%20Card.png)
 # What this is
 Quotepaper Designer was inspired by [Quotefancy](https://quotefancy.com/), but for quotes from shows. The aim is to later build a GUI so that any wallpaper can be generated from any quote at the user's convenience. Apparently, it is a CLI tool that takes fortune files for certain shows, and creates wallpapers that have the quote and the scene from the show when the quote was said. It does this using subtitles that are also provided by the user along with the shows themselves in video format. 
 
