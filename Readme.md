@@ -33,7 +33,7 @@ python Source.py [full path to folder] [full path to fortune file]
 
 
 # Contribution
-You can follow the usage instructions to create more wallpapers for different shows and add them here to the shows folder. Any improvements to the code is also deeply appreciated. 
+You can follow the usage instructions to create more wallpapers for different shows and add them here to the shows folder. Any improvements to the code are also deeply appreciated. 
 
 # To-Do
 1. Make it into a GUI for easier use, or make the cli interface more user friendly.
