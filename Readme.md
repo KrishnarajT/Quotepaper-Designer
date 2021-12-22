@@ -67,3 +67,7 @@ Inspiration for the font [Museo 300](https://fonts.adobe.com/fonts/museo) was ta
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Big%20Bang%20Theory/The%20Big%20Bang%20Theory%20Season%205%20-%2024.jpg)
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s05%20-%2028.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.5%20-%201.jpg)
+
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s02%20-%2066.jpg)
