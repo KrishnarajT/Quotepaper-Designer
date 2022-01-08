@@ -43,6 +43,7 @@ def extract_frames(path_to_folder, quote_search_text):
                         print(timestamp)
 
                         video = cv2.VideoCapture(path_to_vid)
+                        print(path_to_vid)
                         fps = video.get(cv2.CAP_PROP_FPS)
                         fps = round(fps, 2)
                         print(fps)
@@ -83,4 +84,4 @@ def make_wallpapers(base_path, image_path, quote_list):
     text = quote_list[int(image_path.stem)]
     draw.text((begin_x, begin_y), text, '#e1ebec',
               font=ttf_museo, align='left')
-    img.save(f'./Wallpapers/{base_path.name} - {image_path.name}')
+    img.save(f'{base_path}/Wallpapers/{base_path.name} - {image_path.name}')
