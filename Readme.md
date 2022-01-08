@@ -58,6 +58,8 @@ Inspiration for the font [Museo 300](https://fonts.adobe.com/fonts/museo) was ta
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.2%20-%2031.jpg)
 
+![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.5%20-%208..jpg)
+
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.7%20-%205.jpg)
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s04%20-%2026.jpg)
