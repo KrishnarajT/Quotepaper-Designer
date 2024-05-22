@@ -33,7 +33,7 @@ python Source.py [full path to folder] [full path to fortune file]
 
 
 # Contribution
-You can follow the usage instructions to create more wallpapers for different shows and add them here to the shows folder. Any improvements to the code are also deeply appreciated. 
+You can follow the usage instructions to create more wallpapers for different shows and add them here to the shows folder. Any improvements to the code is also deeply appreciated. 
 
 # To-Do
 1. Make it into a GUI for easier use, or make the cli interface more user friendly.
@@ -58,8 +58,6 @@ Inspiration for the font [Museo 300](https://fonts.adobe.com/fonts/museo) was ta
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.2%20-%2031.jpg)
 
-![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.5%20-%208..jpg)
-
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.7%20-%205.jpg)
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s04%20-%2026.jpg)
@@ -69,7 +67,3 @@ Inspiration for the font [Museo 300](https://fonts.adobe.com/fonts/museo) was ta
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Big%20Bang%20Theory/The%20Big%20Bang%20Theory%20Season%205%20-%2024.jpg)
 
 ![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s05%20-%2028.jpg)
-
-![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Office/Season.5%20-%201.jpg)
-
-![](https://github.com/KrishnarajT/Quotepaper-Designer/blob/master/Shows/The%20Mentalist/s02%20-%2066.jpg)

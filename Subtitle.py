@@ -10,8 +10,8 @@ from pathlib import Path
 # Number of seconds you want to offset the returned timestamp
 # as scenes often start with the dialogues before the scene, or the subtitles may be a little off
 # or the person looks more natural speaking the sentence than when beginning to speak it
-seconds_offset = 1  # integers only
-
+seconds_offset = 0  # integers only
+milliseconds_offset = 0
 
 def search_in_srt(path_to_srt, text):
     '''
@@ -40,14 +40,18 @@ def find_timestamp(all_subs, line_no):
             break
 
     if tmp_list != []:
-        print(tmp_list[_])
-        # timestamp = tmp_list[_].split(',')[0].split(':')
-        timestamp = tmp_list[_].split('>')[1].strip(
-            ' ').split(',')[0].split(':')
-        timestamp.append(int(tmp_list[_].split(',')[1][:3]))
-        for _, line_no in enumerate(timestamp):
-            timestamp[_] = int(timestamp[_])
-        timestamp[2] = timestamp[2] + seconds_offset
-        return timestamp
+        try:
+            print(tmp_list[_])
+            # timestamp = tmp_list[_].split(',')[0].split(':')
+            timestamp = tmp_list[_].split('>')[0].strip(
+                ' ').split(',')[0].split(':')
+            timestamp.append(int(tmp_list[_].split(',')[1][:3]))
+            for _, line_no in enumerate(timestamp):
+                timestamp[_] = int(timestamp[_])
+            timestamp[2] = timestamp[2] + seconds_offset
+            timestamp[3] = timestamp[3] + milliseconds_offset
+            return timestamp
+        except:
+            return []
     else:
         return []

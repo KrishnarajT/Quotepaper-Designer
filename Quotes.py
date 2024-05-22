@@ -16,7 +16,7 @@ def modify_quotes(base_path, fortune_file_path):
     Makes the quotes shorter so that they can fit on the screen. Also removes ones that are too long for the screen.
     and saves them as Mod_Quotename in the Modified Quotes Folder
     '''
-    with open(f'{fortune_file_path}', 'r') as f:
+    with open(f'{fortune_file_path}', 'r', encoding="utf-8") as f:
         quote_list = f.read().split('%')
         for i in range(len(quote_list)):
             quote_lines = quote_list[i].split('\n')
@@ -61,16 +61,18 @@ def remove_brackets(mod_quotesfile_path):
 
     while len(rem_list) != 0:
         rem_list = []
-        for _, i in enumerate(quotes):
-            if i == '[':
-                rem_list.append(_)
-            if i == ']':
-                rem_list.append(_)
-        tmp = quotes[rem_list[-2]:rem_list[-1]+1]
-        quotes = quotes.replace(tmp, '')
-        rem_list.remove(rem_list[-1])
-        rem_list.remove(rem_list[-1])
-
+        try:
+            for _, i in enumerate(quotes):
+                if i == '[':
+                    rem_list.append(_)
+                if i == ']':
+                    rem_list.append(_)
+            tmp = quotes[rem_list[-2]:rem_list[-1]+1]
+            quotes = quotes.replace(tmp, '')
+            rem_list.remove(rem_list[-1])
+            rem_list.remove(rem_list[-1])
+        except:
+            print("Error in removing brackets")
     # Parenthesis
     for _, i in enumerate(quotes):
         if i == '(':
@@ -79,6 +81,7 @@ def remove_brackets(mod_quotesfile_path):
             rem_list.append(_)
 
     while len(rem_list) != 0:
+        # print(rem_list)
         rem_list = []
         for _, i in enumerate(quotes):
             if i == '(':
